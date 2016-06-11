@@ -30,5 +30,10 @@ namespace RodWpf
             v_roomAdd form = new v_roomAdd();
             form.Show();
         }
+
+        private void buttonPrintList_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
