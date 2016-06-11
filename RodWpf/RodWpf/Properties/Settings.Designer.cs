@@ -33,14 +33,5 @@ namespace RodWpf.Properties {
                 return ((string)(this["PolaczenieBaza"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("SELECT * FROM salesLT.Address")]
-        public string SQL {
-            get {
-                return ((string)(this["SQL"]));
-            }
-        }
     }
 }

@@ -10,8 +10,5 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Baza.mdf;Integrated Security=True;Connect Timeout=30</Value>
     </Setting>
-    <Setting Name="SQL" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">SELECT * FROM salesLT.Address</Value>
-    </Setting>
   </Settings>
 </SettingsFile>

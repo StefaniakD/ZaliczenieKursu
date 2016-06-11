@@ -1,37 +1,42 @@
-﻿namespace RodWpf
+﻿using System.Data;
+using System.Windows;
+
+namespace RodWpf
 {
-    class DatabaseConnection
+    public class DatabaseConnection
     {
-        private string sql_string;
-        private string strCon;
-        System.Data.SqlClient.SqlDataAdapter da_1;
-
-        public string Sql
+        public void Query(string sql_string)
         {
-            set { sql_string = value; }
-        }
+            System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(Properties.Settings.Default.PolaczenieBaza);
 
-        public string connection_string
-        {
-            set { strCon = value; }
-        }
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = sql_string;
+            cmd.Connection = con;
 
-        public System.Data.DataSet GetConnection
-        {
-
-            get { return MyDataSet(); }
-
-        }
-
-        private System.Data.DataSet MyDataSet()
-        {
-            System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(strCon);
             con.Open();
-            da_1 = new System.Data.SqlClient.SqlDataAdapter(sql_string, con);
-            System.Data.DataSet dat_set = new System.Data.DataSet();
-            da_1.Fill(dat_set, "Table_Data_1");
+            cmd.ExecuteNonQuery();
             con.Close();
-            return dat_set;
         }
+
+        public int QueryInsert(string sql_string)   //Dopisuje wiersz do tabeli, zwraca id dodanego wiersza.
+        {
+            System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(Properties.Settings.Default.PolaczenieBaza);
+
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = sql_string;
+            cmd.Connection = con;
+
+            con.Open();
+            var reader = cmd.ExecuteReader();
+            reader.Read();
+            int roomId = reader.GetInt32(0);
+            con.Close();
+            
+            return roomId;
+        }
+
+
     }
 }

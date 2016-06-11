@@ -35,7 +35,17 @@ namespace RodWpf
             }
             else
             {
-
+                Rooms room = new Rooms();
+                try
+                {
+                    room.Add(tbx.Text);
+                    this.Close();
+                }
+                catch ( Exception err)
+                {
+                    MessageBox.Show(err.Message);
+                }
+                
             }
         }
     }
