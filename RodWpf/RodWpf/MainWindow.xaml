@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button x:Name="buttonAddRoom" Content="Dodaj kwatere" HorizontalAlignment="Left" Margin="31,18,0,0" VerticalAlignment="Top" Width="110" Click="buttonAddRoom_Click" Height="21"/>
-        <Button x:Name="buttonPrintList" Content="Formularz do odczytu &#xD;&#xA;stanu liczników" Width="124" RenderTransformOrigin="0.5,0.5" Margin="152,19,241,262" Click="buttonPrintList_Click">
+        <Button x:Name="buttonAddRoom" Content="Dodaj kwatere" HorizontalAlignment="Left" Margin="31,18,0,0" VerticalAlignment="Top" Width="119" Click="buttonAddRoom_Click" Height="21"/>
+        <Button x:Name="buttonPrintList" Content="Formularz do odczytu &#xD;&#xA;stanu liczników" Width="124" RenderTransformOrigin="0.5,0.5" Margin="166,18,227,253" Click="buttonPrintList_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -18,6 +18,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <Button x:Name="buttonAddEnergyConuter" Content="Dodaj Licznik Energii" HorizontalAlignment="Left" Margin="31,44,0,0" VerticalAlignment="Top" Width="119" Click="buttonAddEnergyConuter_Click"/>
 
     </Grid>
 </Window>

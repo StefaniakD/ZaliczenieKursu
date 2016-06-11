@@ -1,0 +1,21 @@
+﻿<Window x:Class="RodWpf.v_energyConuterAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RodWpf"
+        mc:Ignorable="d"
+        Title="v_energyConuterAdd" Height="300" Width="300">
+    <Grid Loaded="Grid_Loaded">
+        <Label x:Name="label" Content="Numer Licznika(*):" HorizontalAlignment="Left" Margin="33,52,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxEnergyConuterNumber" HorizontalAlignment="Left" Height="23" Margin="144,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label1" Content="Data Zamontowania(*):" HorizontalAlignment="Left" Margin="7,83,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxMountDate" HorizontalAlignment="Left" Height="23" Margin="144,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label2" Content="Data Ważności(*):" HorizontalAlignment="Left" Margin="36,114,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxValidDate" HorizontalAlignment="Left" Height="23" Margin="144,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="buttonSave" Content="Zapisz" HorizontalAlignment="Left" Margin="162,187,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="label3" Content="Kwatera:" HorizontalAlignment="Left" Margin="84,145,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbxRoomList" HorizontalAlignment="Left" Margin="144,146,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

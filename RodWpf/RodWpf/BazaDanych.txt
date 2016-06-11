@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[Rooms] (
+    [roomId]         INT          IDENTITY (1, 1) NOT NULL,
+    [roomNumber]     VARCHAR (25) NOT NULL,
+    [pEnergyCounter] INT          NULL,
+    PRIMARY KEY CLUSTERED ([roomId] ASC)
+);
+
+CREATE TABLE [dbo].[EnergyReadings] (
+    [energyReadingId] INT        IDENTITY (1, 1) NOT NULL,
+    [pRoom]           INT        NOT NULL,
+    [readingDate]     DATE       NOT NULL,
+    [value]           INT        NOT NULL,
+    [price]           FLOAT (53) NOT NULL,
+    [pCharge]         INT        NULL,
+    [pLastReading]    INT        NULL,
+    PRIMARY KEY CLUSTERED ([energyReadingId] ASC)
+);
+
+CREATE TABLE [dbo].[EnergyCounters] (
+    [energyCounterId]     INT          IDENTITY (1, 1) NOT NULL,
+    [energyCounterNumber] VARCHAR (25) NOT NULL,
+    [mountDate]           DATE         NOT NULL,
+    [validDate]           DATE         NOT NULL,
+    PRIMARY KEY CLUSTERED ([energyCounterId] ASC)
+);
