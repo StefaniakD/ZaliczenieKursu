@@ -26,7 +26,17 @@ namespace RodWpf
 
         private void buttonSave_Click(object sender, RoutedEventArgs e)
         {
+            TextBox tbx = new TextBox();
+            tbx = this.tbxRoomNumber;
+            if (String.IsNullOrWhiteSpace(tbx.Text))
+            {
+                MessageBox.Show("Pole numer działki nie może być puste.");
+                tbx.Focus();
+            }
+            else
+            {
 
+            }
         }
     }
 }

@@ -70,6 +70,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Rooms.cs" />
     <Compile Include="v_roomAdd.xaml.cs">
       <DependentUpon>v_roomAdd.xaml</DependentUpon>
     </Compile>

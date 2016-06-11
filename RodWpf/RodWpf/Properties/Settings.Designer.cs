@@ -26,8 +26,8 @@ namespace RodWpf.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=serwerpauli.database.windows.net;Initial Catalog=Orania;Persist Secur" +
-            "ity Info=True;User ID=paulaP;Password=Password0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Baza.mdf;Inte" +
+            "grated Security=True;Connect Timeout=30")]
         public string PolaczenieBaza {
             get {
                 return ((string)(this["PolaczenieBaza"]));
