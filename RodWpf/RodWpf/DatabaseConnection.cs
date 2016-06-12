@@ -46,7 +46,6 @@ namespace RodWpf
             
             return roomId;
         }
-
-
+        
     }
 }

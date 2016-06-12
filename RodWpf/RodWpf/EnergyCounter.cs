@@ -1,7 +1,4 @@
-﻿using System.Data;
-using System.Windows;
-
-namespace RodWpf
+﻿namespace RodWpf
 {
     class EnergyCounter
     {
