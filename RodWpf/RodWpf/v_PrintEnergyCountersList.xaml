@@ -1,0 +1,18 @@
+﻿<Window x:Class="RodWpf.v_PrintEnergyCountersList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RodWpf"
+        mc:Ignorable="d"
+        Title="Lista Liczników" Height="303.383" Width="613.534">
+    <Grid Loaded="Grid_Loaded">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="79*"/>
+            <ColumnDefinition Width="67*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="true" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Height="183" Width="586" Grid.ColumnSpan="2"/>
+        <Button x:Name="buttonPrint" Content="Wydrukuj" HorizontalAlignment="Left" Margin="185,212,0,0" VerticalAlignment="Top" Width="83" Grid.Column="1"/>
+
+    </Grid>
+</Window>

@@ -25,7 +25,8 @@ namespace RodWpf
 
         private void buttonPrintList_Click(object sender, RoutedEventArgs e)
         {
-
+            v_PrintEnergyCountersList form = new v_PrintEnergyCountersList();
+            form.Show();
         }
 
         private void buttonAddEnergyConuter_Click(object sender, RoutedEventArgs e)

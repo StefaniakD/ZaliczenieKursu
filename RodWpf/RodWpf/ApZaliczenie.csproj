@@ -72,6 +72,7 @@
     </ApplicationDefinition>
     <Compile Include="EnergyCounter.cs" />
     <Compile Include="EnergyPrice.cs" />
+    <Compile Include="Form.cs" />
     <Compile Include="IPrices.cs" />
     <Compile Include="Rooms.cs" />
     <Compile Include="Validation.cs" />
@@ -80,6 +81,9 @@
     </Compile>
     <Compile Include="v_energyCounterAdd.xaml.cs">
       <DependentUpon>v_energyCounterAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="v_PrintEnergyCountersList.xaml.cs">
+      <DependentUpon>v_PrintEnergyCountersList.xaml</DependentUpon>
     </Compile>
     <Compile Include="v_roomAdd.xaml.cs">
       <DependentUpon>v_roomAdd.xaml</DependentUpon>
@@ -102,6 +106,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="v_energyCounterAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="v_PrintEnergyCountersList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
