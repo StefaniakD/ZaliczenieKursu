@@ -19,6 +19,7 @@
             </Button.RenderTransform>
         </Button>
         <Button x:Name="buttonAddEnergyConuter" Content="Zamontuj Licznik Energii" HorizontalAlignment="Left" Margin="31,44,0,0" VerticalAlignment="Top" Width="144" Click="buttonAddEnergyConuter_Click"/>
+        <Button x:Name="buttonChangeEnergyPrice" Content="Zmień Cenę 1kWh" HorizontalAlignment="Left" Margin="31,69,0,0" VerticalAlignment="Top" Width="144" Click="buttonChangeEnergyPrice_Click"/>
 
     </Grid>
 </Window>

@@ -13,7 +13,7 @@
         <TextBox x:Name="tbxMountDate" HorizontalAlignment="Left" Height="23" Margin="144,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="2"/>
         <Label x:Name="labelVd" Content="Data Ważności(*):" HorizontalAlignment="Left" Margin="36,114,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxValidDate" HorizontalAlignment="Left" Height="23" Margin="144,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="3"/>
-        <Button x:Name="buttonSave" Content="Zapisz" HorizontalAlignment="Left" Margin="162,187,0,0" VerticalAlignment="Top" Width="75" Click="buttonSave_Click" TabIndex="5"/>
+        <Button x:Name="buttonSave" Content="Zapisz" HorizontalAlignment="Left" Margin="160,215,0,0" VerticalAlignment="Top" Width="75" Click="buttonSave_Click" TabIndex="5"/>
         <Label x:Name="label3" Content="Kwatera:" HorizontalAlignment="Left" Margin="84,145,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cbxRoomList" HorizontalAlignment="Left" Margin="144,146,0,0" VerticalAlignment="Top" Width="120" TabIndex="4"/>
 

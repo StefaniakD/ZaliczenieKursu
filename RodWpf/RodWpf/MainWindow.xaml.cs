@@ -1,4 +1,9 @@
-﻿using System.Windows;
+﻿//Program tworzony przez trzech uczestników kursu!!!
+//Paula Piórecka
+//Piotr Piórecki
+//Dominik Stefaniak
+
+using System.Windows;
 
 namespace RodWpf
 {
@@ -26,6 +31,12 @@ namespace RodWpf
         private void buttonAddEnergyConuter_Click(object sender, RoutedEventArgs e)
         {
             v_energyConuterAdd form = new v_energyConuterAdd();
+            form.Show();
+        }
+
+        private void buttonChangeEnergyPrice_Click(object sender, RoutedEventArgs e)
+        {
+            v_changeEnergyPrice form = new v_changeEnergyPrice();
             form.Show();
         }
     }

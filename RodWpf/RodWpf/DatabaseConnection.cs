@@ -17,10 +17,10 @@ namespace RodWpf
 
         public void Query(string sql_string)    //wykorzystane przy UPDATE
         {
-            System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(Properties.Settings.Default.PolaczenieBaza);
-            
-            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
-            cmd.CommandType = System.Data.CommandType.Text;
+            SqlConnection con = new SqlConnection(Properties.Settings.Default.PolaczenieBaza);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
             cmd.CommandText = sql_string;
             cmd.Connection = con;
 
