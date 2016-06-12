@@ -1,0 +1,3 @@
+﻿Projekt tworzony był wykorzystując metodę "Programowania w parach" w trzy osoby.
+
+Ponieważ kod tworzony był w zespole, każda osoba miała równy wkład w powstawanie każdej klasy/metody/tabeli.
