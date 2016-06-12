@@ -18,5 +18,20 @@ namespace RodWpf
             
             return roomId;
         }
+
+        public DataTable GetRoomSet()
+        {
+            DatabaseConnection db = new DatabaseConnection();
+
+            DataTable dt = db.QuerySelect("SELECT * FROM Rooms ORDER BY roomNumber ASC");
+            return dt;
+        }
+
+        public void AssignEnergyCounterToRoom(int roomId, int pEnergyCounter)
+        {
+            DatabaseConnection dt = new DatabaseConnection();
+
+            dt.Query("UPDATE rooms SET pEnergyCounter = '"+pEnergyCounter+"' WHERE roomId = '"+roomId+"';");
+        }
     }
 }

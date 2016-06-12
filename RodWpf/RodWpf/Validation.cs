@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,7 +18,7 @@ namespace RodWpf
 
     class Validation
     {
-        private List<Box> BoxList;
+        private List<Box> BoxList { get; set; }
 
         public Validation()
         {
@@ -57,6 +58,17 @@ namespace RodWpf
                 return firstError;
             }
             else return null;
+        }
+
+        public Boolean IsDate(TextBox tbx)
+        {
+            Regex re = new Regex("^(19|20[0-9][0-9][-](0[1-9]|1[012])[-](0[1-9]|[12][0-9]|3[01]))$");
+            if (!re.IsMatch(tbx.Text))
+            {
+                MessageBox.Show("Podaj datę w formacie RRRR-MM-DD.");
+                return false;
+            }
+            return true;
         }
     }
 }

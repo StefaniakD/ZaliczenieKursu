@@ -15,7 +15,7 @@ namespace RodWpf
             return dt;
         }   
 
-        public void Query(string sql_string)    //  Na razie niepotrzebne
+        public void Query(string sql_string)    //wykorzystane przy UPDATE
         {
             System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(Properties.Settings.Default.PolaczenieBaza);
             
@@ -31,9 +31,9 @@ namespace RodWpf
 
         public int QueryInsert(string sql_string)   //INSERT INTO   Dopisuje wiersz do tabeli, zwraca id dodanego wiersza.
         {
-            System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(Properties.Settings.Default.PolaczenieBaza);
+            SqlConnection con = new SqlConnection(Properties.Settings.Default.PolaczenieBaza);
 
-            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            SqlCommand cmd = new SqlCommand();
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.CommandText = sql_string;
             cmd.Connection = con;

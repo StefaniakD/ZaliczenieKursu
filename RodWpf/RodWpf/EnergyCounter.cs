@@ -1,18 +1,20 @@
 ﻿using System.Data;
+using System.Windows;
 
 namespace RodWpf
 {
     class EnergyCounter
     {
-            public DataTable GetRoomSet()
-            {
-                DatabaseConnection db = new DatabaseConnection();
+        public int Add(string energyCounterNumber, string mountDate, string validDate, int roomId)
+        {
+            DatabaseConnection db = new DatabaseConnection();
+            Rooms room = new Rooms();
+            
+            int counterId = db.QueryInsert("INSERT INTO energyCounters (energyCounterNumber, mountDate, validDate) OUTPUT inserted.energyCounterId VALUES ('"+energyCounterNumber+"','"+mountDate+"','"+validDate+"');");
+            room.AssignEnergyCounterToRoom(roomId, counterId);
 
-                DataTable dt = db.QuerySelect(@"SELECT roomNumber FROM Rooms ORDER BY roomNumber ASC");
-                
-                return dt;
-            }
+            return counterId;
+        }
 
-      
     }
 }
