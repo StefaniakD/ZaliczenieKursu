@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RodWpf"
         mc:Ignorable="d"
-        Title="v_energyConuterAdd" Height="300" Width="300">
+        Title="Dodaj Licznik Energii" Height="300" Width="300">
     <Grid Loaded="Grid_Loaded">
         <Label x:Name="labelNumber" Content="Numer Licznika(*):" HorizontalAlignment="Left" Margin="33,52,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxEnergyConuterNumber" HorizontalAlignment="Left" Height="23" Margin="144,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="1"/>

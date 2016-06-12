@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RodWpf"
         mc:Ignorable="d"
-        Title="v_changeEnergyPrice" Height="212" Width="300">
+        Title="Zmien cene za 1kWh" Height="212" Width="300">
     <Grid Loaded="Grid_Loaded">
         <Label x:Name="labelPrice" Content="Cena za 1kWh(*):" HorizontalAlignment="Left" Margin="45,45,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxPrice" HorizontalAlignment="Left" Height="23" Margin="150,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

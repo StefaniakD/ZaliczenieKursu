@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RodWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Menu" Height="350" Width="525">
     <Grid>
         <Button x:Name="buttonAddRoom" Content="Dodaj kwatere" HorizontalAlignment="Left" Margin="31,18,0,0" VerticalAlignment="Top" Width="144" Click="buttonAddRoom_Click" Height="21"/>
         <Button x:Name="buttonPrintList" Content="Formularz do odczytu &#xD;&#xA;stanu liczników" RenderTransformOrigin="0.5,0.5" Margin="184,19,202,254" Click="buttonPrintList_Click">
