@@ -47,9 +47,10 @@ namespace RodWpf
             TextBox tbxVd = this.tbxValidDate;
             ComboBox cbx = this.cbxRoomList;
 
-            Validation vld = new Validation();
             EnergyCounter ec = new EnergyCounter();
 
+            Validation vld = new Validation();
+            
             vld.AddToBoxList(labelNumber.Content.ToString(), tbxEcn);
             vld.AddToBoxList(labelMd.Content.ToString(), tbxMd);
             vld.AddToBoxList(labelVd.Content.ToString(), tbxVd);

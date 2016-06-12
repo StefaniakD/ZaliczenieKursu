@@ -40,13 +40,49 @@ namespace RodWpf
         {
             EnergyPrice ep = new EnergyPrice();
 
-            ep.Price = Convert.ToSingle(tbxPrice.Text.ToString());
-            ep.IssueDate = tbxIssueDate.Text;
-            ep.ToPayDays = Int32.Parse(tbxToPayDays.Text);
+            Validation vld = new Validation();
 
-            ep.Update();
+            vld.AddToBoxList(labelPrice.Content.ToString(), tbxPrice);
+            vld.AddToBoxList(labelIssueDate.Content.ToString(), tbxIssueDate);
+            vld.AddToBoxList(labelToPayDays.Content.ToString(), tbxToPayDays);
 
-            this.Close();
+            TextBox firstErrorBox = vld.IsRequired();
+
+            if (firstErrorBox != null)
+            {
+                switch (firstErrorBox.Name)
+                {
+                    case "tbxPrice": firstErrorBox.Text = ep.Price.ToString(); break;
+                    case "tbxToPayDays": firstErrorBox.Text = ep.ToPayDays.ToString(); break;
+                }
+                firstErrorBox.Focus();
+            }
+            else if (!vld.IsDate(tbxIssueDate))
+            {
+                tbxIssueDate.Text = ep.IssueDate;
+                tbxIssueDate.Focus();
+            }
+            else
+            {
+                try
+                {
+                    ep.Price = Convert.ToSingle(tbxPrice.Text.ToString());
+                    ep.IssueDate = tbxIssueDate.Text;
+                    ep.ToPayDays = Int32.Parse(tbxToPayDays.Text);
+
+                    ep.Update();
+
+                    this.Close();
+                }
+                catch (System.FormatException)
+                {
+                    MessageBox.Show("Format Ceny to XX,YY (Przecinek, nie kropka!)");
+                }
+                catch(Exception err)
+                {
+                    MessageBox.Show(err.GetType().ToString());
+                }
+            }
         }
     }
 }

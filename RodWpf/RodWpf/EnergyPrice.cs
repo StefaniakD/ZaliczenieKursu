@@ -52,6 +52,11 @@ namespace RodWpf
             }
         }
 
+        public EnergyPrice()
+        {
+            Select();
+        }
+
         public void Update()
         {
             DatabaseConnection dc = new DatabaseConnection();
