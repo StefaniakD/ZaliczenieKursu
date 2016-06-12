@@ -18,7 +18,8 @@ namespace RodWpf
     /// Interaction logic for v_roomAdd.xaml
     /// </summary>
     public partial class v_roomAdd : Window
-    {
+    {      
+
         public v_roomAdd()
         {
             InitializeComponent();
@@ -26,16 +27,23 @@ namespace RodWpf
 
         private void buttonSave_Click(object sender, RoutedEventArgs e)
         {
-            TextBox tbx = new TextBox();
-            tbx = this.tbxRoomNumber;
-            if (String.IsNullOrWhiteSpace(tbx.Text))
+            
+
+            Validation vld = new Validation();
+            TextBox tbx = this.tbxRoomNumber;
+
+            vld.AddToBoxList(label.Content.ToString(), tbx);
+
+            Rooms room = new Rooms();
+
+            TextBox firstErrorBox = vld.IsRequired();
+
+            if (firstErrorBox!=null)
             {
-                MessageBox.Show("Pole numer działki nie może być puste.");
-                tbx.Focus();
+                firstErrorBox.Focus();
             }
             else
             {
-                Rooms room = new Rooms();
                 try
                 {
                     room.Add(tbx.Text);
@@ -45,7 +53,6 @@ namespace RodWpf
                 {
                     MessageBox.Show(err.Message);
                 }
-                
             }
         }
     }

@@ -72,6 +72,7 @@
     </ApplicationDefinition>
     <Compile Include="EnergyCounter.cs" />
     <Compile Include="Rooms.cs" />
+    <Compile Include="Validation.cs" />
     <Compile Include="v_energyConuterAdd.xaml.cs">
       <DependentUpon>v_energyConuterAdd.xaml</DependentUpon>
     </Compile>

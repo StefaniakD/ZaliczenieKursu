@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="v_energyConuterAdd" Height="300" Width="300">
     <Grid Loaded="Grid_Loaded">
-        <Label x:Name="label" Content="Numer Licznika(*):" HorizontalAlignment="Left" Margin="33,52,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelNumber" Content="Numer Licznika(*):" HorizontalAlignment="Left" Margin="33,52,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxEnergyConuterNumber" HorizontalAlignment="Left" Height="23" Margin="144,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label1" Content="Data Zamontowania(*):" HorizontalAlignment="Left" Margin="7,83,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelMd" Content="Data Zamontowania(*):" HorizontalAlignment="Left" Margin="7,83,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxMountDate" HorizontalAlignment="Left" Height="23" Margin="144,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label2" Content="Data Ważności(*):" HorizontalAlignment="Left" Margin="36,114,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelVd" Content="Data Ważności(*):" HorizontalAlignment="Left" Margin="36,114,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxValidDate" HorizontalAlignment="Left" Height="23" Margin="144,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="buttonSave" Content="Zapisz" HorizontalAlignment="Left" Margin="162,187,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="buttonSave" Content="Zapisz" HorizontalAlignment="Left" Margin="162,187,0,0" VerticalAlignment="Top" Width="75" Click="buttonSave_Click"/>
         <Label x:Name="label3" Content="Kwatera:" HorizontalAlignment="Left" Margin="84,145,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cbxRoomList" HorizontalAlignment="Left" Margin="144,146,0,0" VerticalAlignment="Top" Width="120"/>
 

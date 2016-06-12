@@ -1,13 +1,11 @@
 ﻿using System.Data;
-using System.Windows;
 using System.Data.SqlClient;
-using System.Data;
 
 namespace RodWpf
 {
     public class DatabaseConnection
     {
-        public DataTable QuerySelect(string sql_string)
+        public DataTable QuerySelect(string sql_string)     //SELECT    Pobiera z Bazy 
         {
             SqlConnection con = new SqlConnection(Properties.Settings.Default.PolaczenieBaza);
             SqlDataAdapter sda = new SqlDataAdapter(sql_string, con);
@@ -15,9 +13,9 @@ namespace RodWpf
             sda.Fill(dt);
 
             return dt;
-        }
+        }   
 
-        public void Query(string sql_string)
+        public void Query(string sql_string)    //  Na razie niepotrzebne
         {
             System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(Properties.Settings.Default.PolaczenieBaza);
             
@@ -29,9 +27,9 @@ namespace RodWpf
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
-        }
+        }   
 
-        public int QueryInsert(string sql_string)   //Dopisuje wiersz do tabeli, zwraca id dodanego wiersza.
+        public int QueryInsert(string sql_string)   //INSERT INTO   Dopisuje wiersz do tabeli, zwraca id dodanego wiersza.
         {
             System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(Properties.Settings.Default.PolaczenieBaza);
 

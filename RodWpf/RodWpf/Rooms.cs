@@ -10,13 +10,13 @@ namespace RodWpf
 {
     class Rooms
     {
-        public Boolean Add(string roomNumber)
+        public int Add(string roomNumber)
         {
             DatabaseConnection db = new DatabaseConnection();
 
             int roomId = db.QueryInsert("INSERT INTO rooms (roomNumber) OUTPUT inserted.roomid VALUES ('"+roomNumber+"');");
             
-            return true;
+            return roomId;
         }
     }
 }

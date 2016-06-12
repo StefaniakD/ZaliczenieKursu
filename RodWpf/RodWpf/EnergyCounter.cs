@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 
 namespace RodWpf
 {
@@ -13,9 +8,11 @@ namespace RodWpf
             {
                 DatabaseConnection db = new DatabaseConnection();
 
-                DataTable dt = db.QuerySelect(@"SELECT roomNumber FROM Rooms");
+                DataTable dt = db.QuerySelect(@"SELECT roomNumber FROM Rooms ORDER BY roomNumber ASC");
                 
                 return dt;
             }
+
+      
     }
 }
