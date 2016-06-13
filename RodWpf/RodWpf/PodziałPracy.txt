@@ -1,3 +1,21 @@
-﻿Projekt tworzony był wykorzystując metodę "Programowania w parach" w trzy osoby.
+﻿Projekt tworzony był wykorzystując metodę "Programowania w parach" 
+w trzy osoby.
 
-Ponieważ kod tworzony był w zespole, każda osoba miała równy wkład w powstawanie każdej klasy/metody/tabeli.
+Ponieważ kod tworzony był w zespole, każda osoba miała równy wkład 
+w powstawanie każdej klasy/metody/tabeli.
+
+Główną osobą piszącą ten kod był Dominik Stefaniak:
+-IPrices.cs
+-EnergyPrices.cs
+-v_changEnergyPrice.cs
+-v_energyCounterAdd.cs
+-v_roomAdd.cs
+Główną osobą piszącą ten kod była Paula Piórecka:
+-EnergyCounters.cs
+-Form.cs
+-v_PrintEnergyCounterList.xaml
+Główną osobą do piszącą ten kod był Piotr Piórecki:
+-Validation.cs
+-DatabaseConnection.cs
+
+Projekt bazy danych, klas i formatek wspólny.
