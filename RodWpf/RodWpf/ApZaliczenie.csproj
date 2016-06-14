@@ -161,6 +161,7 @@
     <Content Include="Baza.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Instrukcja.txt" />
     <Resource Include="PodziałPracy.txt" />
     <Resource Include="BazaDanych.txt" />
     <Content Include="Baza_log.ldf">

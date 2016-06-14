@@ -1,0 +1,23 @@
+﻿Po uruchomieniu aplikacji otwiera się okienkowe Menu.
+1.Dodaj kwaterę
+	uruchomienie tej opcji spowoduje otwarcie nowego okna, służącego do 
+	dodania do tabeli rooms w bd nowego rekordu.
+
+2. Zamontuj Licznik energii.
+	służy do dodania do tabeli energyCounters rekordu o nwym liczniku energii.
+	Opacja wiąże również licznik z rekordem z tabeli rooms.
+	Zastosowana jest również walidacja poprawności formatu wpisywanych danych.
+	Combobox automatycznie wypełnia się numerami pokoi z tabeli rooms.
+
+3.Zmień cenę 1kWh
+	opcja ta zmienia (jeżeli taki jest, lub go dodaje jeśli go nie ma) wpis 
+	w tabeli prices dotyczący ceny za energię elektryczną.
+	Jeżeli taki wpis istnieje, okno automatycznie wypełni się aktualnymi danymi.
+	Zastosowano walidację wpisywanych danych.
+
+4.Formularz do odczytu stanu liczników
+	opcja ta tworzy listę wszystkich liczników energii ze wszystkimi danymi na swój
+	temat w celu utworzenia fomularza dla elektryka do sporządzenia odczytów zużytej
+	energii. Docelowo funkacja ta ma tworzyć plik tekstowy gotowy do wydruku.
+
+Projekt ma być rozwijany w przyszłości.
